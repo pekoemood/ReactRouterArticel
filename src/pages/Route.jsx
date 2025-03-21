@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Form } from "react-router-dom";
 import App from "../App";
 import About from "./About";
 import Content from "./Content";
@@ -6,6 +6,7 @@ import ErrorPage from "./ErrorPage";
 import Articles, { loader as articlesLoader } from "./Articles";
 import Article, { loader as articleLoader } from "./Article";
 import Rails, { action as apiAction, loader as apiLoader, deleteAction, editAction } from "./Rails";
+import TestForm from "./TestForm";
 
 const routes = createBrowserRouter([
 	{
@@ -43,6 +44,10 @@ const routes = createBrowserRouter([
         path: '/rails/:id/patch',
         action: editAction,
       },
+			{
+				path: '/form',
+				element: <TestForm />
+			},
 			{
 				path: "*",
 				element: <ErrorPage />,

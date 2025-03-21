@@ -19,6 +19,9 @@ const Navbar = () => {
 				<Link to='/rails' className="btn btn-ghost text-xl">
 					api
 				</Link>
+				<Link to='/form' className="btn btn-ghost text-xl">
+					form
+				</Link>
 			</div>
 		</div>
 	);
